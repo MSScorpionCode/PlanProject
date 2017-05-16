@@ -1,6 +1,6 @@
 <nav class="navbar nabbar-inverse">
     <div class="container-fluid">
-        <!--<img src="Logo.png" alt="Logo" 2class="navbar-brand">-->
+        <!--<img src="Logo.png" alt="Logo" class="navbar-brand">-->
         <ul class="nav navbar-nav">
             <li class="active"><a href="index.php?pageNr=7">Home</a></li>
             <li><a href="index.php?pageNr=5">Chemisch Lab</a></li>

@@ -83,9 +83,23 @@ $output = array_merge($output1, $output2);
 
 
 <script type="text/javascript">
-$(function() {
+$(function() 
+{
     $('.chk_boxes').click(function(){
         $('.chk_boxes2').prop('checked', this.checked);
+    });
+});
+
+$(function() 
+{
+    var $div = $('.showhide').hide()
+    $('.actShow').mouseenter(function()
+    {
+        $div.show();
+    });
+    $('.actShow').mouseleave(function()
+    {
+        $div.hide();
     });
 });
 </script>

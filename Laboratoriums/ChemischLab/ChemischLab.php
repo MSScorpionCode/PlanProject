@@ -10,6 +10,19 @@
         </ul>
     </div>
 </nav>
+
+<?php 
+
+if (isset($_POST['Verder']))
+{
+    require('ChemischPlanning.php');
+}
+else
+{
+
+
+
+?>
     
 <div class="container-fluid">
     <div class="row">
@@ -20,7 +33,7 @@
                     <div class="col-md-2">
                     </div>
                     <div class="col-md-3">
-                        <div class="checkbox">
+                        
 <?php
                         $parameters = array(':lab' => "Mechanisch");
                         $sth = $pdo->prepare("SELECT uitvoerder FROM opdracht where lab = :lab");
@@ -29,18 +42,19 @@
                         while ($row = $sth->fetch()) 
                         {
                             echo "<label>"
-                               . $row['uitvoerder'] . "</label>"
+                               . $row['uitvoerder'] 
                                . "<input type='checkbox' 
                                          class='form-control chk_boxes2' 
                                          name='check_list[]' 
                                          value='"
-                               . $row['uitvoerder'] . "'>";
+                               . $row['uitvoerder'] . "'>"
+                               . "</label>";
                         }
 
             
 ?>
-                        <input type="checkbox" class="chk_boxes" label='check all'>check all
-                        </div>
+                        <label>check all<input type="checkbox" class="chk_boxes form-control" label='check all'></label>
+                        
                     </div>    
                     <div class="col-md-2">
                         <div class="vertical-lines hidden-sm hidden-xs">
@@ -82,3 +96,6 @@
         </div>
     </div>
 </div>
+<?php
+}
+?>

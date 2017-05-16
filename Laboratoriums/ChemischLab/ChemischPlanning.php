@@ -57,7 +57,7 @@ $output = array_merge($output1, $output2);
         <div class="col-md-5">
         </div>
         <div class="col-md-1">
-            <button type="button" class="btn btn-primary">Print</button>
+            <button type="button" class="btn btn-primary print">Print</button>
         </div>
         <div class="col-md-2">
             <select name="weeks" class="form-control">
@@ -221,7 +221,7 @@ $output = array_merge($output1, $output2);
 
         while ($row = $sth->fetch()) 
         {
-            echo "<td>"
+            echo "<td class='actShow'>"
                . "Opdracht: "    
                . $row['opdracht']
                . "<br>"
@@ -230,6 +230,7 @@ $output = array_merge($output1, $output2);
                . "<br>"
                . "Activiteiten: "
                . $row['aantal_activiteiten']
+               . "<div class='showhide'>" . $row['activiteit'] . "</div>"
                . "</td>";
         } 
 
@@ -237,3 +238,4 @@ $output = array_merge($output1, $output2);
 ?>
     </tbody>       
 </table>
+
