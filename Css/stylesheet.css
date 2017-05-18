@@ -25,5 +25,19 @@
   border-radius: 4px;
 }
 
+#position {
+  position: relative;
+}
 
+#custom {
+  margin: 50px 0 0 0;
+  font-size: 25px;
+}
 
+#margin-row {
+  margin: 20px 20px 20px 20px;
+}
+
+#margin-top {
+  margin: 100px 0 0 0;
+}

@@ -1,18 +1,6 @@
-<nav class="navbar nabbar-inverse">
-    <div class="container-fluid">
-        <!--<img src="Logo.png" alt="Logo" 2class="navbar-brand">-->
-        <ul class="nav navbar-nav">
-            <li><a href="index.php?pageNr=7">Home</a></li>
-            <li><a href="index.php?pageNr=5">Chemisch Lab</a></li>
-            <li><a href="index.php?pageNr=3">Fysisch Lab</a></li>
-            <li class="active"><a href="index.php?pageNr=1">MechanischLab</a></li>
-        </ul>
-    </div>
-</nav>
-    
 <div class="container-fluid">
     <div class="row">
-        <div class="col-md-12 text-center">
+        <div class="col-md-12 text-center mid">
             <!-- START FORM -->
             <form method="post" class="form-horizontal"> 
                 <div class="form-group">
@@ -21,19 +9,25 @@
                     <div class="col-md-3">
                         <br>
                         <br>
-                        <input type="checkbox" class="chk_boxes2" name="checkbox[]" id="1"><label for="1">Medewerker</label>
-                        <input type="checkbox" class="chk_boxes2" name="checkbox[]" id="2"><label for="2">Medewerker</label>
+                        <label>Medewerker
+                        <input type="checkbox" class="form-control chk_boxes2" name="checkbox[]" id="1"></label>
+                        <label>Medewerker
+                        <input type="checkbox" class="form-control chk_boxes2" name="checkbox[]" id="2"></label>
+                        <label>Medewerker              
+                        <input type="checkbox" class="form-control chk_boxes2" name="checkbox[]" id="3"></label>
                         <br>
-                        <input type="checkbox" class="chk_boxes2" name="checkbox[]" id="3"><label for="3">Medewerker</label>
-                        <input type="checkbox" class="chk_boxes2" name="checkbox[]" id="4"><label for="4">Medewerker</label>
+                        <label>Medewerker
+                        <input type="checkbox" class="form-control chk_boxes2" name="checkbox[]" id="4"></label>
+                        <label>Medewerker
+                        <input type="checkbox" class="form-control chk_boxes2" name="checkbox[]" id="5"></label>
+                        <label>Medewerker
+                        <input type="checkbox" class="form-control chk_boxes2" name="checkbox[]" id="6"></label>
                         <br>
-                        <input type="checkbox" class="chk_boxes2" name="checkbox[]" id="5"><label for="5">Medewerker</label>
-                        <input type="checkbox" class="chk_boxes2" name="checkbox[]" id="6"><label for="6">Medewerker</label>
-                        <br>
-                        <input type="checkbox" class="chk_boxes" label='check all'>check all
+                        <label>Check all
+                        <input type="checkbox" class="form-control chk_boxes" label='check all'></label>
                     </div>    
                     <div class="col-md-2">
-                        <div class="vertical-lines hidden-xs hidden-sm">
+                        <div class="vertical-lines hidden-sm hidden-xs">
                         <!-- VERTICAL LINE -->            
                         <!-- VERTICAL LINE -->
                             <br>

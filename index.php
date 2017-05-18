@@ -1,13 +1,13 @@
 <?php
-    require('Modules/config.php');
+    //require('Modules/config.php');
     require('Modules/Functies.php');
 
-    $pdo = connectDB();
+    //$pdo = connectDB();
 ?>
 <!DOCTYPE html>
 <html>
 <head>
-    <title>BAS / Home</title>
+    <title>BAS</title>
     <meta charset="utf-8">
     <!-- STYLESHEETS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
@@ -53,28 +53,13 @@ $output = array_merge($output1, $output2);
 
     switch ($pageNr) {
         case 1:
-            require('./Laboratoriums/MechanischLab/MechanischLab.php');
+            require('./Pages/Planning.php');
             break;
         case 2:
-            require('./Laboratoriums/MechanischLab/MechanischPlanning.php');
-            break;
-        case 3: 
-            require('./Laboratoriums/FysischLab/FysischLab.php');
-            break;
-        case 4:
-            require('./Laboratoriums/FysischLab/FysischPlanning.php');
-            break;
-        case 5:
-            require('./Laboratoriums/ChemischLab/ChemischLab.php');
-            break;
-        case 6: 
-            require('./Laboratoriums/ChemischLab/ChemischPlanning.php');
-            break;
-        case 7:
-            require('Home.php');
+            require('./Pages/Planning.php');
             break;    
         default: 
-            require('Home.php');
+            require('./Pages/Select.php');
             break;  
     }
 
@@ -102,6 +87,15 @@ $(function()
         $div.hide();
     });
 });
+
+/*
+$('.down').css('margin-top', function () {
+    return ($(window).height() - $(this).height()) / 2.8
+});
+
+$('.right').css('margin-left', function () {
+    return ($(window).height() - $(this).height()) / 2
+});*/
 </script>
 </body>
 </html>
