@@ -6,62 +6,49 @@
 <?php
 
 
-        for ($i=0; $i < ; $i++) { 
-            echo 
+        $input = array(1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24); 
+        $parameters = array(':PRINS_functie' => 'Laboranten');
+        $sth = $pdo->prepare('SELECT medewerkerid, PRINS_functie, naam FROM medewerkers WHERE PRINS_functie = :PRINS_functie');
+
+        $len = count($input); // $input == $sth->execute($parameters)
+        $thirdOfArray = array_slice($input, 0, $len / 3);
+        //print_r($thirdOfArray);
+        //print_r($len);
+        //print_r($input);
+        foreach ($thirdOfArray as $row) //$row = $sth->fetch() || $sth->fetch() as $row
+        {
+            echo "<div class='row' id='margin-row'>"
+               . "<div class='col-md-1 col-lg-1'></div>";
+
+            for ($j=0; $j<2; $j++)
+            {
+                echo "<div class='col-md-4 col-lg-4'>"
+                   . "<div class='col-md-2 col-lg-2'>"
+                   . "<input type='checkbox' class='form-control chk_boxes2 chk1' name='check_list[] value='"
+                   //. $row['medewerkerid']
+                   . "'></div>"
+                   . "<label class='col-md-2 col-lg-2'>"
+                   . "Medewerker" //. $row['medewerker']
+                   . "</label>"        
+                   . "</div>";
+            }
+            for ($k=0; $k<1; $k++)
+            {
+                echo "<div class='col-md-3 col-lg-3'>"
+                   . "<div class='col-md-2 col-lg-2'>"
+                   . "<input type='checkbox' class='form-control chk_boxes2 chk2' name='check_list[]' value='"
+                   //. $row['medewerkerid']
+                   . "'></div>"
+                   . "<label class='col-md-2 col-lg-2'>"
+                   . "Medewerker" //$row['medewerker']
+                   . "</label>"
+                   . "</div>";
+            }
+
+            echo "</div";
         }
+?>       
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-/*
-        for ($i=0; $i < 8; $i++) { 
-            echo "<div class='row' id='margin-row'>
-                <div class='col-md-1 col-lg-1'></div>
-                <div class='col-md-4 col-lg-4'>
-                    <div class='col-md-2 col-lg-2'><input type='checkbox' class='form-control chk_boxes2' name='check_list[]'></div>
-                    <label class='col-md-2 col-lg-2'>Medewerker</label>        
-                </div>
-                <div class='col-md-4 col-lg-4'> 
-                    <div class='col-md-2 col-lg-2'><input type='checkbox' class='form-control chk_boxes2' name='check_list[]'></div> 
-                    <label class='col-md-2 col-lg-2'>Medewerker</label>
-                </div>
-                <div class='col-md-3 col-lg-3'>
-                    <div class='col-md-2 col-lg-2'><input type='checkbox' class='form-control chk_boxes2' name='check_list[]'></div>
-                    <label class='col-md-2 col-lg-2'>Medewerker</label>
-                </div>
-                </div>";
-        }
-
-*/
-?>         
         <!-- ROW SUBMIT -->
         <div class="row" id="margin-top">
             <hr>
@@ -82,6 +69,3 @@
     </form>
     <!-- END FORM -->
 </div>
-<?php
-    print_r($_POST);
-?>

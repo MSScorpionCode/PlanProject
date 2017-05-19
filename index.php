@@ -1,8 +1,8 @@
 <?php
-    //require('Modules/config.php');
+    require('Modules/config.php');
     require('Modules/Functies.php');
 
-    //$pdo = connectDB();
+    $pdo = connectDB();
 ?>
 <!DOCTYPE html>
 <html>
@@ -87,6 +87,12 @@ $(function()
         $div.hide();
     });
 });
+
+var $chkWidth = $('.chk1').width();
+$(function(){
+    $('.chk2').width($chkWidth);
+});
+
 
 /*
 $('.down').css('margin-top', function () {
