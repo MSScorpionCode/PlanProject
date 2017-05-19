@@ -13,31 +13,53 @@
 	color: #337ab7;
 }
 
-.form-control-chkbox {
-  display: block;
-  width: 100%;
-  height: 34px;
-  padding: 6px 12px;
-  font-size: 14px;
-  color: #555;
-  background-color: #fff;
-  border: 1px solid #ccc;
-  border-radius: 4px;
+#custom {
+  margin: 50px 0 0 0;
+  font-size: 20px;
+}
+
+#bascolor {
+  color: #D76F2C;
+}
+
+hr {
+  border-color: #D76F2C;
+  margin: 1px 0 1px 0;
+}
+
+#basbtn1 {
+  background-color: #D76F2C;
+  color: white;
+  margin-top: 20px; 
+}
+
+#basbtn {
+  background-color: #D76F2C;
+  color: white; 
+  margin-top: 4px;
 }
 
 #position {
   position: relative;
+  float: left;
 }
 
-#custom {
-  margin: 50px 0 0 0;
-  font-size: 25px;
+#marginset {
+  margin: 0 0 0 0;
+}
+
+#marginsetsubmit {
+  margin: 4px; 0 0 0;
 }
 
 #margin-row {
-  margin: 20px 20px 20px 20px;
+  margin: 0px 20px 20px 20px;
 }
 
 #margin-top {
   margin: 100px 0 0 0;
+}
+
+#leftpadding {
+  padding: 8px 0 0 20px;
 }
