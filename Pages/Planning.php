@@ -140,53 +140,5 @@ for ($j=0; $j < $counted; $j++) {
                . "</div>";
         }
     }
-
-
-?>
-
-
-
-           
-        
-       
-
+?>     
 </div>
-
-
-<?php
-
-?>
-
-
-
-
-
-
-<?php 
-/*
-        $medewerker1 = "J. J. Janssen";
-        $parameters = array(':medewerker' => $medewerker1);
-        $sth = $pdo->prepare('SELECT * FROM opdracht WHERE uitvoerder = :medewerker');
-        $sth->execute($parameters);
-
-        echo "<tr>";
-
-        while ($row = $sth->fetch()) 
-        {
-            echo "<td class='actShow'>"
-               . "Opdracht: "    
-               . $row['opdracht']
-               . "<br>"
-               . "Opdrachtgever: "
-               . $row['opdrachtgever']
-               . "<br>"
-               . "Activiteiten: "
-               . $row['aantal_activiteiten']
-               . "<div class='showhide'>" . $row['activiteit'] . "</div>"
-               . "</td>"
-               . "</div>";
-        } 
-
-        echo "</tr>";
-*/
-?>
