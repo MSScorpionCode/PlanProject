@@ -1,29 +1,32 @@
 <div class="container-fluid" id="custom">
     <!-- START FORM -->
-    <form method="post" action="index.php?pageNr=2" class="form-horizontal text-center"> 
+    <form method="post" action="index.php?pageNr=2" class="form-horizontal text-center">
         <!-- ROW 1 CHECKBOXES -->
-        
+
 <?php
 
         $parameters = array(':PRINS_functie' => 'Laborant');
-        $sth = $pdo->prepare('SELECT naam, medewerkerid FROM medewerkers WHERE PRINS_functie = :PRINS_functie');
+        $sth = $pdo->prepare("SELECT naam, medewerkerid FROM medewerkers WHERE PRINS_functie = :PRINS_functie AND dienstbetrekking = '1'");
         $sth->execute($parameters);
 
         $input = array();
         $name = array();
         $id = array();
         while ($col = $sth->fetch()) {
-          $input[] = $col; 
+          $input[] = $col;
           $name[] = $col['naam'];
           $id[] = $col['medewerkerid'];
         }
 
 
-        $len = count($input); 
+        $len = count($input);
         $thirdOfArray = array_slice($input, 0, $len / 3);
 
+        print_r($len);
+
+
         $i = 0;
-        foreach ($thirdOfArray as $row) 
+        foreach ($thirdOfArray as $row)
         {
 
             echo "<div class='row' id='margin-row'>"
@@ -38,7 +41,7 @@
                    . "'></div>"
                    . "<label class='col-md-3 col-lg-3' id='marginset'>"
                    . $name[$i]
-                   . "</label>"        
+                   . "</label>"
                    . "</div>";
                    $i++;
             }
@@ -58,7 +61,7 @@
             }
             echo "</div>";
         }
-?>       
+?>
 
         <!-- ROW SUBMIT -->
         <div class="row" id="margin-top">
@@ -75,7 +78,8 @@
                     <input type="submit" name="Verder" value="Verder" class="form-control" id="basbtn">
                 </div>
             </div>
-        </div>  
+        </div>
     </form>
     <!-- END FORM -->
+    <a href="index.php?pageNr=3">test</a>
 </div>

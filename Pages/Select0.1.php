@@ -2,7 +2,7 @@
     <div class="row">
         <div class="col-md-12 text-center mid">
             <!-- START FORM -->
-            <form method="post" class="form-horizontal"> 
+            <form method="post" class="form-horizontal">
                 <div class="form-group">
                     <div class="col-md-2">
                     </div>
@@ -13,7 +13,7 @@
                         <input type="checkbox" class="form-control chk_boxes2" name="checkbox[]" id="1"></label>
                         <label>Medewerker
                         <input type="checkbox" class="form-control chk_boxes2" name="checkbox[]" id="2"></label>
-                        <label>Medewerker              
+                        <label>Medewerker
                         <input type="checkbox" class="form-control chk_boxes2" name="checkbox[]" id="3"></label>
                         <br>
                         <label>Medewerker
@@ -25,10 +25,10 @@
                         <br>
                         <label>Check all
                         <input type="checkbox" class="form-control chk_boxes" label='check all'></label>
-                    </div>    
+                    </div>
                     <div class="col-md-2">
                         <div class="vertical-lines hidden-sm hidden-xs">
-                        <!-- VERTICAL LINE -->            
+                        <!-- VERTICAL LINE -->
                         <!-- VERTICAL LINE -->
                             <br>
                             <br>
@@ -46,7 +46,7 @@
                     <select class="form-control" name="weeks">
                         <?php foreach ($output as $week) : ?>
                             <option value="<?php echo $week ?>"
-                            <?php 
+                            <?php
                             $weekToday = date('W Y');
                             if ($week == $weekToday) {
                                 echo 'selected';
